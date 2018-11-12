@@ -1,0 +1,15 @@
+module.exports = [
+    { id: 1,   question: 1, sequenceNumber: 1, text: 'Select the 4 characteristics that describe you best.', type: 'checklist', roles: [1,2,3,4,5,6,7,8] },
+    { id: 2,   question: 1, sequenceNumber: 2, text: 'Drag the following characteristics into the right order.', type: 'orderlist' },
+    { id: 3,   question: 1, sequenceNumber: 3, text: 'Drag the following characteristics into the right order.', type: 'orderlist' },
+    { id: 4,   question: 2, sequenceNumber: 1, text: 'Drag the following characteristics into the right order.', type: 'orderlist', roleWords: [1, 11, 21, 31] },
+    { id: 5,   question: 2, sequenceNumber: 2, text: 'Drag the following characteristics into the right order.', type: 'orderlist', roleWords: [6, 16, 26, 36] },
+    { id: 6,   question: 2, sequenceNumber: 3, text: 'Drag the following characteristics into the right order.', type: 'orderlist', roleWords: [2, 7, 12, 17] },
+    { id: 7,   question: 2, sequenceNumber: 4, text: 'Drag the following characteristics into the right order.', type: 'orderlist', roleWords: [22, 27, 32, 37] },
+    { id: 8,   question: 2, sequenceNumber: 5, text: 'Drag the following characteristics into the right order.', type: 'orderlist', roleWords: [3, 8, 23, 28] },
+    { id: 9,   question: 2, sequenceNumber: 6, text: 'Drag the following characteristics into the right order.', type: 'orderlist', roleWords: [13, 18, 33, 38] },
+    { id: 10,  question: 2,  sequenceNumber: 7, text: 'Drag the following characteristics into the right order.', type: 'orderlist', roleWords: [4, 19, 24, 39] },
+    { id: 11,  question: 2,  sequenceNumber: 8, text: 'Drag the following characteristics into the right order.', type: 'orderlist', roleWords: [9, 14, 29, 34] },
+    { id: 12,  question: 2,  sequenceNumber: 9, text: 'Drag the following characteristics into the right order.', type: 'orderlist', roleWords: [15, 20, 25, 30] },
+    { id: 13,  question: 2,  sequenceNumber: 10, text: 'Drag the following characteristics into the right order.', type: 'orderlist', roleWords: [5, 10, 35, 40] },
+];
