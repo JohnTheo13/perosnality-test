@@ -1,15 +1,66 @@
 module.exports = [
-    { id: 1,   question: 1, sequenceNumber: 1, text: 'Select the 4 characteristics that describe you best.', type: 'checklist', roles: [1,2,3,4,5,6,7,8] },
-    { id: 2,   question: 1, sequenceNumber: 2, text: 'Drag the following characteristics into the right order.', type: 'orderlist' },
-    { id: 3,   question: 1, sequenceNumber: 3, text: 'Drag the following characteristics into the right order.', type: 'orderlist' },
-    { id: 4,   question: 2, sequenceNumber: 1, text: 'Drag the following characteristics into the right order.', type: 'orderlist', roleWords: [1, 11, 21, 31] },
-    { id: 5,   question: 2, sequenceNumber: 2, text: 'Drag the following characteristics into the right order.', type: 'orderlist', roleWords: [6, 16, 26, 36] },
-    { id: 6,   question: 2, sequenceNumber: 3, text: 'Drag the following characteristics into the right order.', type: 'orderlist', roleWords: [2, 7, 12, 17] },
-    { id: 7,   question: 2, sequenceNumber: 4, text: 'Drag the following characteristics into the right order.', type: 'orderlist', roleWords: [22, 27, 32, 37] },
-    { id: 8,   question: 2, sequenceNumber: 5, text: 'Drag the following characteristics into the right order.', type: 'orderlist', roleWords: [3, 8, 23, 28] },
-    { id: 9,   question: 2, sequenceNumber: 6, text: 'Drag the following characteristics into the right order.', type: 'orderlist', roleWords: [13, 18, 33, 38] },
-    { id: 10,  question: 2,  sequenceNumber: 7, text: 'Drag the following characteristics into the right order.', type: 'orderlist', roleWords: [4, 19, 24, 39] },
-    { id: 11,  question: 2,  sequenceNumber: 8, text: 'Drag the following characteristics into the right order.', type: 'orderlist', roleWords: [9, 14, 29, 34] },
-    { id: 12,  question: 2,  sequenceNumber: 9, text: 'Drag the following characteristics into the right order.', type: 'orderlist', roleWords: [15, 20, 25, 30] },
-    { id: 13,  question: 2,  sequenceNumber: 10, text: 'Drag the following characteristics into the right order.', type: 'orderlist', roleWords: [5, 10, 35, 40] },
+    { sequenceNumber: 1, text: 'Select the 4 characteristics that describe you best.', type: 'checklist', roles: [
+        "5c52e75c5a7db82da4d58f87",
+        "5c52e75c5a7db82da4d58f88",
+        "5c52e75c5a7db82da4d58f89",
+        "5c52e75c5a7db82da4d58f8a",
+        "5c52e75c5a7db82da4d58f8b",
+        "5c52e75c5a7db82da4d58f8c",
+        "5c52e75c5a7db82da4d58f8d",
+        "5c52e75c5a7db82da4d58f8e"
+    ] },
+    { sequenceNumber: 2, text: 'Drag the following characteristics into the right order.', type: 'orderlist' },
+    { sequenceNumber: 3, text: 'Drag the following characteristics into the right order.', type: 'orderlist' },
+    { sequenceNumber: 1, text: 'Drag the following characteristics into the right order.', type: 'orderlist', roleWords: [
+        "5c52e4aea441782cf17f085e",
+        "5c52e4aea441782cf17f0868",
+        "5c52e4aea441782cf17f0872",
+        "5c52e4aea441782cf17f087c"] },
+    { sequenceNumber: 2, text: 'Drag the following characteristics into the right order.', type: 'orderlist', roleWords: [
+        "5c52e4aea441782cf17f0863",
+        "5c52e4aea441782cf17f086d",
+        "5c52e4aea441782cf17f0877",
+        "5c52e4aea441782cf17f0881"] },
+    { sequenceNumber: 3, text: 'Drag the following characteristics into the right order.', type: 'orderlist', roleWords: [
+        "5c52e4aea441782cf17f085f",
+        "5c52e4aea441782cf17f0864",
+        "5c52e4aea441782cf17f0869",
+        "5c52e4aea441782cf17f086e"] },
+    { sequenceNumber: 4, text: 'Drag the following characteristics into the right order.', type: 'orderlist', roleWords: [
+        "5c52e4aea441782cf17f0873",
+        "5c52e4aea441782cf17f0878",
+        "5c52e4aea441782cf17f087d",
+        "5c52e4aea441782cf17f0882"] },
+    { sequenceNumber: 5, text: 'Drag the following characteristics into the right order.', type: 'orderlist', roleWords: [
+        "5c52e4aea441782cf17f0860",
+        "5c52e4aea441782cf17f0865",
+        "5c52e4aea441782cf17f0874",
+        "5c52e4aea441782cf17f0879"] },
+    { sequenceNumber: 6, text: 'Drag the following characteristics into the right order.', type: 'orderlist', roleWords: [
+        "5c52e4aea441782cf17f086a",
+        "5c52e4aea441782cf17f086f",
+        "5c52e4aea441782cf17f087e",
+        "5c52e4aea441782cf17f0883"] },
+    {  sequenceNumber: 7, text: 'Drag the following characteristics into the right order.', type: 'orderlist', roleWords: [
+        "5c52e4aea441782cf17f0861",
+        "5c52e4aea441782cf17f0870",
+        "5c52e4aea441782cf17f0875",
+        "5c52e4aea441782cf17f0884"] },
+    {  sequenceNumber: 8, text: 'Drag the following characteristics into the right order.', type: 'orderlist', roleWords: 
+    ["5c52e4aea441782cf17f0866",
+    "5c52e4aea441782cf17f086b",
+    "5c52e4aea441782cf17f087a",
+    "5c52e4aea441782cf17f087f"] },
+    {  sequenceNumber: 9, text: 'Drag the following characteristics into the right order.', type: 'orderlist', roleWords: [
+        "5c52e4aea441782cf17f086c",
+        "5c52e4aea441782cf17f0871",
+        "5c52e4aea441782cf17f0876",
+        "5c52e4aea441782cf17f087b"] },
+    {  sequenceNumber: 10, text: 'Drag the following characteristics into the right order.', type: 'orderlist', roleWords: [
+        "5c52e4aea441782cf17f0862",
+        "5c52e4aea441782cf17f0867",
+        "5c52e4aea441782cf17f0880",
+        "5c52e4aea441782cf17f0885"] },
 ];
+
+// qustion === questionId

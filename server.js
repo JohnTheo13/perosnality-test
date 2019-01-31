@@ -1,14 +1,30 @@
-const Koa = require('koa');
-const Router = require('koa-router');
+const Koa = require('koa')
+const Router = require('koa-router')
+const logger = require('koa-logger')
+const cors = require('@koa/cors')
+const bodyParser = require('koa-bodyparser')
+const config = require('./config')
 
-const app = new Koa();
-const router = new Router();
+const app = new Koa()
+const router = new Router()
 
-router.get('/', (ctx, next) => {
-  ctx.response.body = 'skata';
-  next();
-});
+if (config.env === 'development') {
+  app.use(logger())
+}
 
-app.use(router.routes());
+// for multipart/form-data
+app.use(bodyParser({
+  enableTypes: ['json', 'form'],
+  jsonLimit: '5mb',
+  onerror: function (err, ctx) {
+    ctx.throw('body parse error', 422)
+  }
+}))
+app.use(cors())
 
-module.exports = app;
+// API routes
+require('./routes')(router)
+app.use(router.routes())
+app.use(router.allowedMethods())
+
+module.exports = app
