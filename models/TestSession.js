@@ -7,7 +7,12 @@ const testSessionSchema = new mongoose.Schema({
   },
   test: {
     type: mongoose.Schema.ObjectId,
-    ref: 'Test'
+    ref: 'Test',
+    unique: true
+  },
+  session: {
+    type: mongoose.Schema.ObjectId,
+    ref: 'Session'
   },
   step: {
     type: mongoose.Schema.ObjectId,

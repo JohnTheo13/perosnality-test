@@ -20,12 +20,12 @@
   "homepage": "https://github.com/JohnTheo13/personality-test#readme",
   "dependencies": {
     "@koa/cors": "^2.2.3",
-    "connect-mongo": "^2.0.3",
     "dotenv": "^6.2.0",
     "koa": "^2.6.2",
     "koa-bodyparser": "^4.2.1",
     "koa-logger": "^3.2.0",
     "koa-router": "^7.4.0",
+    "koa-session": "^5.10.1",
     "mongoose": "^5.4.8",
     "mongoose-mongodb-errors": "^0.0.2"
   },
