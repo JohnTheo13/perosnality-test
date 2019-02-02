@@ -4,17 +4,15 @@ const TestSession = mongoose.model('TestSession');
 const Answer = mongoose.model('Answer');
 
 exports.generateTest = async (testId, testSessionId = undefined) => {
-  let testSession;
+  let newTestSession;
   let answers;
   if (testSessionId) {
-    answers = await Answer.find({ testSession: testSessionId });
+    // answers = await Answer.find({ testSession: testSessionId });
   } else {
-    // testSession = new TestSession({ test: testId });
-    // await testSession.save();
+    newTestSession = new TestSession({ test: testId });
+    const sessionSavePromise = newTestSession.save();
+    const testPromise = Test.findOne({ _id: testId })
+    const [session, test] = await Promise.all([sessionSavePromise, testPromise])
+    return test;
   }
-
-  const test = await Test.findOne({ _id: testId })
-
-  console.log(test)
-  return test;
 }

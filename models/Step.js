@@ -16,12 +16,4 @@ const stepSchema = new mongoose.Schema({
   }
 });
 
-// function autoPopulate(next) {
-//   this.populate('roles');
-//   next();
-// }
-
-// stepSchema.pre('find', autoPopulate);
-// stepSchema.pre('findOne', autoPopulate);
-
 module.exports = mongoose.model('Step', stepSchema);

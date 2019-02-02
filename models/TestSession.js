@@ -9,14 +9,6 @@ const testSessionSchema = new mongoose.Schema({
     type: mongoose.Schema.ObjectId,
     ref: 'Test',
     unique: true
-  },
-  session: {
-    type: mongoose.Schema.ObjectId,
-    ref: 'Session'
-  },
-  step: {
-    type: mongoose.Schema.ObjectId,
-    ref: 'Step'
   }
 });
 
