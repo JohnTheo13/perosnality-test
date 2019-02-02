@@ -5,7 +5,15 @@ const roleWordSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  translationKey: String
+  translationKey: String,
+  role: {
+    type: mongoose.Schema.ObjectId,
+    ref: 'Role'
+  },
+  step: {
+    type: mongoose.Schema.ObjectId,
+    ref: 'Step'
+  }
 });
 
 module.exports = mongoose.model('RoleWord', roleWordSchema);

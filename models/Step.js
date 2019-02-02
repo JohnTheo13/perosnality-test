@@ -10,14 +10,10 @@ const stepSchema = new mongoose.Schema({
     type: String,
     enum: ['checklist', 'orderlist']
   },
-  roles: [{
+  test: {
     type: mongoose.Schema.ObjectId,
-    ref: 'Role'
-  }],
-  roleWords: [{
-    type: mongoose.Schema.ObjectId,
-    ref: 'RoleWords'
-  }]
+    ref: 'Test'
+  }
 });
 
 // function autoPopulate(next) {

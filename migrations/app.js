@@ -16,9 +16,9 @@ const tests = require('./test');
 
 async function loadData() {
   try {
-    // await RoleWord.insertMany(roleWords);
-    // await Role.insertMany(roles);
-    // await Step.insertMany(steps);
+    await RoleWord.insertMany(roleWords);
+    await Role.insertMany(roles);
+    await Step.insertMany(steps);
     await Test.insertMany(tests) 
     console.log('👍👍👍👍👍👍👍👍 Done!');
     process.exit();

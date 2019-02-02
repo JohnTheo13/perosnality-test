@@ -1,20 +1,13 @@
 module.exports = [
     {
-
+      _id: "5c5316ca1b706a6658318acb",
         name: 'Pioneer',
         translationKey: 'pioneer',
         icon: 'pioneer.svg',
         descriptionStrong: 'The pioneer is a real innovator, a dreamer. He is very creative and innovative and is always working on new ideas. He likes to experiment, tries things on one other way. Pioneers are boosters and pioneers when it comes to changes, are often busy with several things at the same time. The pioneer is adventurous, likes of freedom and leeway.',
         descriptionPit: 'The pitfalls of a pioneer lie mainly in going too fast for others and it not finishing things they start with, less anchoring things. A lot of ideas and little focus. They are often restless and regularly run far ahead of the group.',
-        roleWords: [
-                "5c52e4aea441782cf17f085e",
-                "5c52e4aea441782cf17f085f",
-                "5c52e4aea441782cf17f0860",
-                "5c52e4aea441782cf17f0861",
-                "5c52e4aea441782cf17f0862"
-        ]
 }, {
-
+      _id: "5c5316ca1b706a6658318acc",
         name: 'Networker',
         translationKey: 'networker',
         icon: 'networker.svg',
@@ -27,7 +20,7 @@ module.exports = [
                 "5c52e4aea441782cf17f0867"
         ]
 }, {
-
+      _id: "5c5316ca1b706a6658318acd",
         name: 'Achiever',
         translationKey: 'achiever',
         icon: 'achiever.svg',
@@ -41,7 +34,7 @@ module.exports = [
                 "5c52e4aea441782cf17f086c"
                 ]
 }, {
-
+      _id: "5c5316ca1b706a6658318ace",
         name: 'Strategist',
         icon: 'strategist.svg',
         translationKey: 'strategist',
@@ -55,7 +48,7 @@ module.exports = [
                 "5c52e4aea441782cf17f0871"
                 ]
 }, {
-
+      _id: "5c5316ca1b706a6658318acf",
         name: 'Anchor',
         translationKey: 'anchor',
         icon: 'anchor.svg',
@@ -69,7 +62,7 @@ module.exports = [
                 "5c52e4aea441782cf17f0876"
                 ]
 }, {
-
+      _id: "5c5316ca1b706a6658318ad0",
         name: 'Analyst',
         translationKey: 'analyst',
         icon: 'analyst.svg',
@@ -83,7 +76,7 @@ module.exports = [
                 "5c52e4aea441782cf17f087b"
                 ]
 }, {
-
+    _id: "5c5316ca1b706a6658318ad1",
         name: 'Team Player',
         translationKey: 'team-player',
         icon: 'team-player.svg',
@@ -97,7 +90,7 @@ module.exports = [
                 "5c52e4aea441782cf17f0880"
                 ]
 }, {
-
+      _id: "5c5316ca1b706a6658318ad2",
         name: 'Helper',
         translationKey: 'helper',
         icon: 'helper.svg',
