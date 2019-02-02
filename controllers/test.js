@@ -9,13 +9,11 @@ exports.getTests = async (ctx) => {
 }
 
 exports.getTestById = async (ctx) => {
-  let test = await Test.findById(ctx.params.testId);
-  const testSession = await TestSession.findById(test.id);
+  let test = await Test.findById(ctx.params.testId).populate('steps'); // NOTE: check if we need this here
+  const testSession = await TestSession.findById(test.id)
+  ctx.request.test = test;
   ctx.body = {
-    id: test.id,
-    name: test.name,
-    description: test.description,
-    type: test.type,
+    test,
     lastSessionId: testSession && testSession.id,
     state: testSession ? testSession.state : 'not-started',
   };

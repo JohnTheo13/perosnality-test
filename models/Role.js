@@ -12,10 +12,10 @@ const roleSchema = new mongoose.Schema({
   icon: String,
   descriptionStrong: String,
   descriptionPit: String,
-  roleWords: [{
+  step: {
     type: mongoose.Schema.ObjectId,
-    ref: 'RoleWords'
-  }]
+    ref: 'Step'
+  }
 });
 
 module.exports = mongoose.model('Role', roleSchema);

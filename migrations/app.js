@@ -14,6 +14,16 @@ const roles = require('./roles');
 const steps = require('./steps');
 const tests = require('./test');
 
+async function deleteData() {
+  console.log('😢😢 Goodbye Data...');
+  await RoleWord.remove();
+  await Role.remove();
+  await Step.remove();
+  await Test.remove();
+  console.log('Data Deleted. To load sample data, run\n\n\t npm run sample\n\n');
+  process.exit();
+}
+
 async function loadData() {
   try {
     await RoleWord.insertMany(roleWords);

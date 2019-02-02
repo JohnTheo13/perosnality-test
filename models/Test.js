@@ -12,19 +12,17 @@ const testSchema = new mongoose.Schema({
   description: {
     type: String,
     required: 'You need to provide your description'
-  },
-  steps: [{
-    type: mongoose.Schema.ObjectId,
-    ref: 'Step'
-  }]
+  }
+}, {
+  toJSON: { virtuals: true },  // otherwise virtuals are not visible
+  toObject: { virtuals: true }
 });
 
-// function autoPopulate(next) {
-//   this.populate({path: 'steps'});
-//   next();
-// }
-
-// testSchema.pre('find', autoPopulate);
-// testSchema.pre('findOne', autoPopulate);
+// find steps where the test _id property === test Step  property
+testSchema.virtual('steps', {
+  ref: 'Step', // what model to link?
+  localField: '_id', // which field on the Test?
+  foreignField: 'test' // which field on the Step?
+});
 
 module.exports = mongoose.model('Test', testSchema);
