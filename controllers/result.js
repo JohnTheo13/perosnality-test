@@ -5,21 +5,21 @@ const ScoreCalculator = require('../score-calculator/score-calculator');
 const ResultGenerator = require('../result-generator/result-generator');
 
 const getResult = async ctx => {
-  const { sessionId } = context.params;
+  const { sessionId } = ctx.params;
   const testSession = await TestSession.findById(sessionId);
   if (!testSession) {
     ctx.throw(404, 'Not Found');
   }
 
-  const answers = await Answer.findAll({ testSessionId });
+  const answers = await Answer.find({ testSessionId: sessionId });
 
   const scoreCalculator = new ScoreCalculator(testSession.test.type);
   const resultGenerator = new ResultGenerator(testSession.test.type);
   const score = await scoreCalculator.calculateScore(answers);
   const result = await resultGenerator.generateResult(score);
 
-  context.body = {
-    testType: test.type,
+  ctx.body = {
+    testType: testSession.test.type,
     data: result
   };
 }

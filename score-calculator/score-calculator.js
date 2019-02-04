@@ -5,13 +5,13 @@ const testHandlers = {
 
 class ScoreCalculator {
 
-    constructor(testType) {
-        this.testType = testType;
-    }
+  constructor(testType) {
+    this.testType = testType;
+  }
 
-    calculateScore(answers) {
-        return testHandlers[this.testType](answers);
-    }
+  calculateScore(answers) {
+    return testHandlers.short(answers);
+  }
 }
 
 module.exports = ScoreCalculator;
