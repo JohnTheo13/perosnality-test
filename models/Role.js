@@ -9,6 +9,10 @@ const roleSchema = new mongoose.Schema({
     type: String,
     lowercase: true
   },
+  roleId: {
+    type: Number,
+    required: true
+  },
   icon: String,
   descriptionStrong: String,
   descriptionPit: String,
