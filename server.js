@@ -22,13 +22,14 @@ app.use(session({
 
 
 // for multipart/form-data
-// app.use(bodyParser({
-//   enableTypes: ['json', 'form'],
-//   jsonLimit: '5mb',
-//   onerror: function (err, ctx) {
-//     ctx.throw('body parse error', 422)
-//   }
-// }))
+app.use(bodyParser({
+  enableTypes: ['json', 'form'],
+  jsonLimit: '5mb',
+  onerror: function (err, ctx) {
+    ctx.throw('body parse error', 422)
+  }
+}))
+
 app.use(cors())
 
 // API routes

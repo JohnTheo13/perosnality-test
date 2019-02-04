@@ -2,9 +2,13 @@ const mongoose = require('mongoose');
 
 const answerSchema = new mongoose.Schema({
   data: Object,
-  testSession: {
+  testSessionId: {
     type: mongoose.Schema.ObjectId,
-    ref: 'Answer'
+    ref: 'TestSession'
+  },
+  stepId: {
+    type: mongoose.Schema.ObjectId,
+    ref: 'step'
   }
 });
 
