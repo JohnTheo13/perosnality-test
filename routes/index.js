@@ -3,5 +3,5 @@ module.exports = (router) => {
   router.use('/tests', require('./test'));
   // router.use('/users', require('./users'));
   router.use('/answer', require('./answer')); // post answer
-  // router.use('/result', require('./result')); 
+  router.use('/result', require('./result')); 
 }

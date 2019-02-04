@@ -25,7 +25,8 @@ exports.resumeTestSession = async ctx => {
     .populate({
       path: 'test',
       populate: { path: 'steps' }
-    });
+    })
+    .populate('answers');
   ctx.body = test;
 }
 

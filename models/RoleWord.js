@@ -6,9 +6,9 @@ const roleWordSchema = new mongoose.Schema({
     required: true
   },
   translationKey: String,
-  role: {
-    type: mongoose.Schema.ObjectId,
-    ref: 'Role'
+  roleId: {
+    type: Number,
+    required: true
   },
   step: {
     type: mongoose.Schema.ObjectId,

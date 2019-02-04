@@ -18,7 +18,7 @@ saveAnswer = async ctx => {
       path: 'test',
       populate: { path: 'steps' },
     })
-    .populate('answers', { project: '-data' });
+    .populate('answers', { $project: '-data -testSessionId' });
 
   const [answer, testSession] = await Promise.all([answerPromise, testSessionPromise]);
 
