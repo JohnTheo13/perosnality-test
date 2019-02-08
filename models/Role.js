@@ -16,7 +16,7 @@ const roleSchema = new mongoose.Schema({
   icon: String,
   descriptionStrong: String,
   descriptionPit: String,
-  step: {
+  stepId: {
     type: mongoose.Schema.ObjectId,
     ref: 'Step'
   }

@@ -23,6 +23,7 @@ async function deleteData() {
   await Step.deleteMany();
   await Test.deleteMany();
   await TestSession.deleteMany();
+  await Answer.deleteMany()
   console.log('Data Deleted. To load sample data, run\n\n\t npm run sample\n\n');
   process.exit();
 }

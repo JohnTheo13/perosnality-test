@@ -5,7 +5,7 @@ const testSessionSchema = new mongoose.Schema({
     type: String,
     enum: ['not-started', 'started', 'finished']
   },
-  test: {
+  testId: {
     type: mongoose.Schema.ObjectId,
     ref: 'Test',
     unique: true

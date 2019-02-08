@@ -22,7 +22,7 @@ const testSchema = new mongoose.Schema({
 testSchema.virtual('steps', {
   ref: 'Step', // what model to link?
   localField: '_id', // which field on the Test?
-  foreignField: 'test' // which field on the Step?
+  foreignField: 'testId' // which field on the Step?
 });
 
 module.exports = mongoose.model('Test', testSchema);

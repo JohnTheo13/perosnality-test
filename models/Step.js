@@ -10,7 +10,7 @@ const stepSchema = new mongoose.Schema({
     type: String,
     enum: ['checklist', 'orderlist']
   },
-  test: {
+  testId: {
     type: mongoose.Schema.ObjectId,
     ref: 'Test'
   }

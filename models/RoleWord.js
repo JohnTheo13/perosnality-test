@@ -10,7 +10,7 @@ const roleWordSchema = new mongoose.Schema({
     type: Number,
     required: true
   },
-  step: {
+  stepId: {
     type: mongoose.Schema.ObjectId,
     ref: 'Step'
   }
