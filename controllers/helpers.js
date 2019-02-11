@@ -9,13 +9,11 @@ exports.generateTest = async (testId, userId, testSessionId = undefined) => {
   if (testSessionId) {
     // answers = await Answer.find({ testSession: testSessionId });
   } else {
-    testSession = await TestSession.findOne({ userId });
+    const testSession = await TestSession.findOne({ userId }).populate('test');
     if (!testSession) {
-      const newTestSession = new TestSession({ testId, userId });
-      await newTestSession.save();
-      // const testPromise = Test.findOne({ _id: testId })
-      // const [session, test] = await Promise.all([sessionSavePromise, testPromise])
-      return newTestSession;
+      const newTestSession = new TestSession({ test: testId, userId });
+      const testSession = await newTestSession.populate('test').save();
+      return testSession
     }
     return testSession;
   }

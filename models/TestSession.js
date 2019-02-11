@@ -6,7 +6,7 @@ const testSessionSchema = new mongoose.Schema({
     enum: ['not-started', 'started', 'finished'],
     default: 'not-started'
   },
-  testId: {
+  test: {
     type: mongoose.Schema.ObjectId,
     ref: 'Test'
   },
