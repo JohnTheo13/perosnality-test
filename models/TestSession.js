@@ -14,6 +14,10 @@ const testSessionSchema = new mongoose.Schema({
     type: String,
     unique: true,
     required: true
+  },
+  lastStep: {
+    type: mongoose.Schema.ObjectId,
+    ref: 'Step'
   }
 },{
   toJSON: { virtuals: true },  // otherwise virtuals are not visible
@@ -25,5 +29,14 @@ testSessionSchema.virtual('answers', {
   localField: '_id', // which field on the Test?
   foreignField: 'testSessionId' // which field on the Step?
 });
+
+// function autoPopulate(next) {
+//   this.populate('lastStep');
+//   next();
+// }
+
+// testSessionSchema.pre('findById', autoPopulate);
+// testSessionSchema.pre('findOne', autoPopulate);
+
 
 module.exports = mongoose.model('TestSession', testSessionSchema);

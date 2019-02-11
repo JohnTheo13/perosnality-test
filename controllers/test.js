@@ -9,7 +9,7 @@ exports.getTests = async (ctx) => {
 }
 
 exports.getTestById = async ctx => { // NOTE: change to get by stlug
-  let test = await Test.findById(ctx.params.testId).populate('steps'); // NOTE: check if we need this here
+  let test = await Test.findById(ctx.params.testId); // NOTE: check if we need this here
   const testSession = await TestSession.findOne({ test: test.id })
   // ctx.request.testSession = testSession ? testSession : undefined 
   ctx.body = {
@@ -22,10 +22,7 @@ exports.getTestById = async ctx => { // NOTE: change to get by stlug
 exports.resumeTestSession = async ctx => {
   const test = await TestSession
     .findById(ctx.params.sessionId)
-    .populate({
-      path: 'test',
-      populate: { path: 'steps' }
-    })
+    .populate('test')
     .populate('answers');
   ctx.body = test;
 }

@@ -1,17 +1,17 @@
 module.exports = [
   {
     _id: "5c5363477461ce0f5dc9ae76",
-    sequenceNumber: 1, text: 'Select the 4 characteristics that describe you best.', type: 'checklist',
+    sequenceNumber: 1, text: 'Select the 4 characters that describe you best.', type: 'checklist',
     testId: "5c53638efb25580f9475da76"
   },
   {
     _id: "5c5363477461ce0f5dc9ae77",
-    sequenceNumber: 2, text: 'Drag the following characteristics into the right order.', type: 'orderlist',
+    sequenceNumber: 2, text: 'Drag the following characters into the right order.', type: 'orderlist',
     testId: "5c53638efb25580f9475da76"
   },
   {
     _id: "5c5363477461ce0f5dc9ae78",
-    sequenceNumber: 3, text: 'Drag the following characteristics into the right order.', type: 'orderlist',
+    sequenceNumber: 3, text: 'Drag the following characters into the right order.', type: 'orderlist',
     testId: "5c53638efb25580f9475da76"
   },
   { 
