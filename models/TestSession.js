@@ -3,12 +3,17 @@ const mongoose = require('mongoose');
 const testSessionSchema = new mongoose.Schema({
   state: {
     type: String,
-    enum: ['not-started', 'started', 'finished']
+    enum: ['not-started', 'started', 'finished'],
+    default: 'not-started'
   },
   testId: {
     type: mongoose.Schema.ObjectId,
-    ref: 'Test',
-    unique: true
+    ref: 'Test'
+  },
+  userId: { // User or device ID
+    type: String,
+    unique: true,
+    required: true
   }
 },{
   toJSON: { virtuals: true },  // otherwise virtuals are not visible

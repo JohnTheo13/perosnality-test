@@ -8,7 +8,7 @@ router
     // .post('/', TestsController.addTest)
     // .put('/', TestsController.updateTest)
     .get('/:testId', catchErrors(getTestById))
-    .post('/:testId/sessions', createTestSession)
+    .post('/:testId/sessions/:userId', createTestSession)
     .get('/:testId/sessions/:sessionId', resumeTestSession);
 
 module.exports = router.routes();

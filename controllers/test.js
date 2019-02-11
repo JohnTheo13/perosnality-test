@@ -31,6 +31,6 @@ exports.resumeTestSession = async ctx => {
 }
 
 exports.createTestSession = async (ctx) => {
-  const { testId } = ctx.params;
-  ctx.body = await generateTest(testId);
+  const { testId, userId } = ctx.params;
+  ctx.body = await generateTest(testId, userId);
 }

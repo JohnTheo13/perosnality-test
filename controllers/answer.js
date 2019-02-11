@@ -26,6 +26,9 @@ saveAnswer = async ctx => {
     testSession.state = 'finished';
     await testSession.save();
   }
+  
+  testSession.state = 'started'
+  await testSession.save();
 
   ctx.body = testSession;
 }
