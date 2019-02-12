@@ -15,11 +15,7 @@ const roleSchema = new mongoose.Schema({
   },
   icon: String,
   descriptionStrong: String,
-  descriptionPit: String,
-  stepId: {
-    type: mongoose.Schema.ObjectId,
-    ref: 'Step'
-  }
+  descriptionPit: String
 }, {
   toJSON: { virtuals: true },  // otherwise virtuals are not visible
   toObject: { virtuals: true }

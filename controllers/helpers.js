@@ -15,7 +15,11 @@ exports.generateTest = async (testId, userId, testSessionId = undefined) => {
         { userId, test: testId },
         { new: true, upsert: true }
       )
-      .populate('test');
+      .populate({
+        path: 'test',
+        // populate: { path:  'steps' }
+      })
+      .populate('answers');
     return testSession;
   }
 }
