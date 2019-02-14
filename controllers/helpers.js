@@ -13,13 +13,14 @@ exports.generateTest = async (testId, userId, testSessionId = undefined) => {
       .findOneAndUpdate(
         { userId, test: testId },
         { userId, test: testId },
-        { new: true, upsert: true }
+        { new: true, upsert: true, setDefaultsOnInsert: true }
       )
       .populate({
         path: 'test',
-        // populate: { path:  'steps' }
+        populate: { path: 'steps' },
       })
       .populate('answers');
+    console.log(testSession)
     return testSession;
   }
 }

@@ -4,7 +4,7 @@ const TestSession = mongoose.model('TestSession');
 
 saveAnswer = async ctx => {
   const { params: { sessionId }, request: { body }} = ctx;
-
+console.log(body)
   const answerPromise = Answer
     .findOneAndUpdate(
       { testSessionId: sessionId, stepId: body.stepId },
@@ -29,7 +29,7 @@ saveAnswer = async ctx => {
   
   testSession.state = 'started'
   await testSession.save();
-
+  console.log(testSession)
   ctx.body = testSession;
 }
 

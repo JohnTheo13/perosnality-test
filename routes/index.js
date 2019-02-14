@@ -5,4 +5,5 @@ module.exports = (router) => {
   router.use('/step', require('./step'));
   router.use('/answer', require('./answer')); // post answer
   router.use('/result', require('./result')); 
+  router.use('/roles', require('./role'));
 }

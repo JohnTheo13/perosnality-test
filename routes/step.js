@@ -3,7 +3,6 @@ const router = new Router();
 const { getStep, getStepWithRoles } = require('../controllers/step');
 
 router
-  .get('/:stepId', getStep)
-  .get('/:stepId/roles', getStepWithRoles)
+  .get('/:stepId', getStep);
 
 module.exports = router.routes();

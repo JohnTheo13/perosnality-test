@@ -6,8 +6,7 @@ module.exports = [
     type: "short",
     steps: [
       "5c5363477461ce0f5dc9ae76",
-      "5c5363477461ce0f5dc9ae77",
-      "5c5363477461ce0f5dc9ae78"
+      "5c5363477461ce0f5dc9ae77"
     ]
   },
   {
