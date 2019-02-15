@@ -12,7 +12,6 @@ const testSessionSchema = new mongoose.Schema({
   },
   userId: { // User or device ID
     type: String,
-    unique: true,
     required: true
   },
   lastStep: {

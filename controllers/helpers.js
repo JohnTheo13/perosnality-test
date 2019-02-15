@@ -21,6 +21,6 @@ exports.generateTest = async (testId, userId, testSessionId = undefined) => {
       })
       .populate('answers');
     console.log(testSession)
-    return testSession;
+    return { testSession };
   }
 }
