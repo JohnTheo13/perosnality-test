@@ -21,8 +21,11 @@ exports.getTestById = async ctx => { // NOTE: change to get by stlug
 
 exports.resumeTestSession = async ctx => {
   const test = await TestSession
-    .findById(ctx.params.sessionId)
-    .populate('test')
+    .findOne({ userId: ctx.params.userId })
+    .populate({
+      path: 'test',
+      populate: { path: 'steps' },
+    })
     .populate('answers');
   ctx.body = test;
 }

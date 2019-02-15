@@ -1,7 +1,9 @@
 const Router = require('koa-router');
 const router = new Router();
-const getRoles = require('../controllers/role');
+const { getAllRoles, getRoles } = require('../controllers/role');
 
-router.get('/', getRoles)
+router
+  .get('/', getAllRoles)
+  .get('/:roleIds', getRoles);
 
 module.exports = router.routes();

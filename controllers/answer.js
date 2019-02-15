@@ -18,7 +18,7 @@ console.log(body)
       path: 'test',
       populate: { path: 'steps' },
     })
-    .populate('answers', { $project: '-data -testSessionId' });
+    .populate('answers');
 
   const [answer, testSession] = await Promise.all([answerPromise, testSessionPromise]);
 
