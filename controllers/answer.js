@@ -4,15 +4,14 @@ const TestSession = mongoose.model('TestSession');
 
 saveAnswer = async ctx => {
   const { params: { sessionId }, request: { body }} = ctx;
-console.log(body)
-  const answerPromise = Answer
+  await Answer
     .findOneAndUpdate(
       { testSessionId: sessionId, stepId: body.stepId },
       { ...body },
       { upsert: true, new: true }
     );
 
-  const testSessionPromise = TestSession
+  const testSession = await TestSession
     .findById(sessionId)
     .populate({
       path: 'test',
@@ -20,14 +19,12 @@ console.log(body)
     })
     .populate('answers');
 
-  const [answer, testSession] = await Promise.all([answerPromise, testSessionPromise]);
-
   if (testSession.answers && testSession.test.steps.length === testSession.answers.length) {
     testSession.state = 'finished';
-    await testSession.save();
+  } else {
+    testSession.state = 'started'
   }
-  
-  testSession.state = 'started'
+
   await testSession.save();
   console.log(testSession)
   ctx.body = testSession;

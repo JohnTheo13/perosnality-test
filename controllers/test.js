@@ -40,6 +40,10 @@ exports.resumeShort = async (ctx) => {
   const { params: { userId, testId } } = ctx;
   const testSession = await TestSession
     .findOne({ userId, test: testId })
+    .populate({
+      path: 'test',
+      populate: { path: 'steps' },
+    })
     .populate('answers');
   const { answers } = testSession;
   console.log(answers[0].data.mostRepresentativeTypes)
