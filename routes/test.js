@@ -9,7 +9,7 @@ router
     // .put('/', TestsController.updateTest)
     .get('/:testId', catchErrors(getTestById))
     .post('/:testId/sessions/:userId', createTestSession)
-    .get('/:testId/sessions/:userId', resumeTestSession)
+    .get('/sessions/:userId', resumeTestSession)
     .get('/:testId/short/:userId', resumeShort);
 
 module.exports = router.routes();

@@ -25,9 +25,10 @@ exports.resumeTestSession = async ctx => {
     .findOne({ userId: ctx.params.userId })
     .populate({
       path: 'test',
-      populate: { path: 'steps' },
+      populate: { path: 'steps', populate: { path: 'words' } },
     })
-    .populate('answers');
+    .populate('answers')
+    .populate('step');
   ctx.body = test;
 }
 
@@ -35,6 +36,7 @@ exports.createTestSession = async (ctx) => {
   const { testId, userId } = ctx.params;
   ctx.body = await generateTest(testId, userId);
 }
+
 
 exports.resumeShort = async (ctx) => {
   const { params: { userId, testId } } = ctx;

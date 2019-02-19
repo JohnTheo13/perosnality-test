@@ -12,21 +12,26 @@ saveAnswer = async ctx => {
     );
 
   const testSession = await TestSession
-    .findById(sessionId)
+    .findOneAndUpdate(
+      { _id: sessionId },
+      { step: body.stepId },
+      { upsert: true, new: true }
+    )
     .populate({
       path: 'test',
-      populate: { path: 'steps' },
+      populate: { path: 'steps', populate: { path: 'words' } },
     })
-    .populate('answers');
+    .populate('answers')
+    .populate('step');
 
   if (testSession.answers && testSession.test.steps.length === testSession.answers.length) {
     testSession.state = 'finished';
   } else {
     testSession.state = 'started'
   }
-
+  testSession.lastStep = body.stepId;
   await testSession.save();
-  console.log(testSession)
+  console.log(testSession.test.steps)
   ctx.body = testSession;
 }
 

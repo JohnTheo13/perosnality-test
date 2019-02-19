@@ -1,6 +1,6 @@
 module.exports = async (answers) => {
   const score = {};
-  if (answers.length !== 3) {
+  if (answers.length !== 2) {
     throw 'Test session is not finished';
   }
 

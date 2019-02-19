@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Role = mongoose.model('Role');
-const topRankCount = 3;
+const topRankCount = 4;
 
 module.exports = async (score) => {
     const roleIds = Object.keys(score);
@@ -21,7 +21,7 @@ module.exports = async (score) => {
         $in: [...topRoleIds]
       }
     }).populate('words');
-console.log(roles)
+
   return roles.map(role => ({
     rank: ranking[role.roleId],
     words: role.words.map((word) => ({

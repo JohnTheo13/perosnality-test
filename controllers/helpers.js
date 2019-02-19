@@ -17,10 +17,10 @@ exports.generateTest = async (testId, userId, testSessionId = undefined) => {
       )
       .populate({
         path: 'test',
-        populate: { path: 'steps' },
+        populate: { path: 'steps', populate: { path: 'words' } },
       })
       .populate('answers');
-    console.log(testSession)
+    console.log(testSession.test.steps)
     return { testSession };
   }
 }

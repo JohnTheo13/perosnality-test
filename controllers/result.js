@@ -17,10 +17,10 @@ const getResult = async ctx => {
   const resultGenerator = new ResultGenerator(testSession.test.type);
   const score = await scoreCalculator.calculateScore(answers);
   const result = await resultGenerator.generateResult(score);
-
+console.log(testSession.test)
   ctx.body = {
     testType: testSession.test.type,
-    data: result
+    result
   };
 }
 

@@ -14,7 +14,7 @@ const testSessionSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  lastStep: {
+  step: {
     type: mongoose.Schema.ObjectId,
     ref: 'Step'
   }
@@ -29,13 +29,13 @@ testSessionSchema.virtual('answers', {
   foreignField: 'testSessionId' // which field on the Step?
 });
 
-function autoPopulate(next) {
-  this.populate('lastStep');
-  next();
-}
+// function autoPopulate(next) {
+//   this.populate('lastStep');
+//   next();
+// }
 
-testSessionSchema.pre('findById', autoPopulate);
-testSessionSchema.pre('findOne', autoPopulate);
-
+// testSessionSchema.pre('findById', autoPopulate);
+// testSessionSchema.pre('findOne', autoPopulate);
+// testSessionSchema.pre('findOneAndUpdate', autoPopulate);
 
 module.exports = mongoose.model('TestSession', testSessionSchema);
