@@ -1,0 +1,14 @@
+node_modules
+build
+src/serviceWorker.js
+
+**/*.md
+package.json
+**/*.json
+**/*.css
+**/*.svg
+**/*.png
+**/*.hbs
+**/*.jpg
+.gitignore
+yarn-lock
