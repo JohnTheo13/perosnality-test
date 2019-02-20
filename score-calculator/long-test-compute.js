@@ -1,12 +1,14 @@
-
+const mongoose = require('mongoose');
+const RoleWord = mongoose.model('RoleWord');
 
 module.exports = async (answers) => {
     const orderedWordsIdsPerSteps = answers.map((a) => a.data.mostRepresentativeOrdered);
-    const fullRoleWords = await RoleWord.findAll({ attributes: ['id', 'roleId'], where: { id: orderedWordsIdsPerSteps } });
+    const fullRoleWords = await RoleWord.find({}, { roleId: 1, wordId: 1 });
+    console.log(orderedWordsIdsPerSteps);
 
     const rolesIdsForWords = {};
     fullRoleWords.forEach((word) => {
-        rolesIdsForWords[word.id] = word.roleId; // done with roleId field
+        rolesIdsForWords[word.wordId] = word.roleId; // done with roleId field
     });
 
     const scoresForRoleIds = {};

@@ -10,7 +10,7 @@ class ScoreCalculator {
   }
 
   calculateScore(answers) {
-    return testHandlers.short(answers);
+    return testHandlers[this.testType](answers);
   }
 }
 

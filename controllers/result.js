@@ -6,7 +6,7 @@ const ResultGenerator = require('../result-generator/result-generator');
 
 const getResult = async ctx => {
   const { sessionId } = ctx.params;
-  const testSession = await TestSession.findById(sessionId);
+  const testSession = await TestSession.findById(sessionId).populate('test');
   if (!testSession) {
     ctx.throw(404, 'Not Found');
   }

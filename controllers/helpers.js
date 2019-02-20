@@ -19,7 +19,8 @@ exports.generateTest = async (testId, userId, testSessionId = undefined) => {
         path: 'test',
         populate: { path: 'steps', populate: { path: 'words' } },
       })
-      .populate('answers');
+      .populate('answers')
+      .populate('step');
     console.log(testSession.test.steps)
     return { testSession };
   }

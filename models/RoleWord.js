@@ -5,6 +5,10 @@ const roleWordSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  wordId: {
+    type: Number,
+    unique: true
+  },
   translationKey: String,
   roleId: {
     type: Number,

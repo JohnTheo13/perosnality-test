@@ -12,7 +12,7 @@ class ResultGenerator {
   }
 
   async generateResult(score) {
-    return testHandlers.short(score);
+    return testHandlers[this.testType](score);
   }
 }
 
