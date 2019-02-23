@@ -29,13 +29,4 @@ testSessionSchema.virtual('answers', {
   foreignField: 'testSessionId' // which field on the Step?
 });
 
-// function autoPopulate(next) {
-//   this.populate('lastStep');
-//   next();
-// }
-
-// testSessionSchema.pre('findById', autoPopulate);
-// testSessionSchema.pre('findOne', autoPopulate);
-// testSessionSchema.pre('findOneAndUpdate', autoPopulate);
-
 module.exports = mongoose.model('TestSession', testSessionSchema);

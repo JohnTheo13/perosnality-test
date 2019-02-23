@@ -4,7 +4,6 @@ const RoleWord = mongoose.model('RoleWord');
 module.exports = async (answers) => {
     const orderedWordsIdsPerSteps = answers.map((a) => a.data.mostRepresentativeOrdered);
     const fullRoleWords = await RoleWord.find({}, { roleId: 1, wordId: 1 });
-    console.log(orderedWordsIdsPerSteps);
 
     const rolesIdsForWords = {};
     fullRoleWords.forEach((word) => {

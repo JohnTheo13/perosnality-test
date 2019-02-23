@@ -37,6 +37,11 @@ exports.createTestSession = async (ctx) => {
   ctx.body = await generateTest(testId, userId);
 }
 
+exports.restartTest = async (ctx) => {
+  const { sessionId } = ctx.params;
+  ctx.body = await generateTest(null, null, sessionId);
+}
+
 
 exports.resumeShort = async (ctx) => {
   const { params: { userId, testId } } = ctx;

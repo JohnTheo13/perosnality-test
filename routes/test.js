@@ -1,6 +1,6 @@
 const Router = require('koa-router');
 const router = new Router();
-const { resumeShort, getTests, getTestById, createTestSession, resumeTestSession } = require('../controllers/test');
+const { restartTest, resumeShort, getTests, getTestById, createTestSession, resumeTestSession } = require('../controllers/test');
 const { catchErrors } = require('../handlers/errorHandlers');
 
 router
@@ -9,6 +9,7 @@ router
     // .put('/', TestsController.updateTest)
     .get('/:testId', catchErrors(getTestById))
     .post('/:testId/sessions/:userId', createTestSession)
+    .post('/sessions/:sessionId', restartTest)
     .get('/sessions/:userId', resumeTestSession)
     .get('/:testId/short/:userId', resumeShort);
 
