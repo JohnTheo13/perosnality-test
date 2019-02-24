@@ -1,10 +1,10 @@
 // import environmental variables from our variables.env file
 require('dotenv').config();
 const mongoose = require('mongoose');
-const { port } = require('./config')
+const { port, database } = require('./config')
 
 // Connect to our Database and handle any bad connections
-mongoose.connect(process.env.DATABASE, { useNewUrlParser: true, useCreateIndex: true });
+mongoose.connect(database, { useNewUrlParser: true, useCreateIndex: true });
 // mongoose.Promise = global.Promise; // Tell Mongoose to use ES6 promises
 mongoose.connection.on('error', (err) => {
   console.error(`🙅 🚫 🙅 🚫 🙅 🚫 🙅 🚫 → ${err.message}`);
@@ -22,3 +22,5 @@ require('./models/Answer');
 
 const server = require('./server')
 server.listen(port, () => console.log(`API server started on ${port}`))
+
+module.exports =  server;
