@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [{ "src": "index.js", "use": "@now/node@canary" }],
   "env": {
-    "DATABASE": "mongodb+srv://johnTheo:M%40ngo2113%3F@testsProvider-x943f.gcp.mongodb.net/testsprovider?retryWrites=true",
+    "DATABASE": "mongodb+srv://johnTheo:M%40ngo2113%3F@testsprovider-x943f.gcp.mongodb.net/testsprovider?retryWrites=true",
     "SESSION_KEY": "key",
     "SESSION_SECRET": "secret",
     "PORT": "3000"
