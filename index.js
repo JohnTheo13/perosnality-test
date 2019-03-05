@@ -20,7 +20,7 @@ require('./models/Test');
 require('./models/TestSession');
 require('./models/Answer');
 
-const server = require('./server')
-server.listen(port, () => console.log(`API server started on ${port}`))
+const app = require('./app')
+app.listen(port, () => console.log(`API server started on ${port}`))
 
-module.exports =  server;
+module.exports =  app;

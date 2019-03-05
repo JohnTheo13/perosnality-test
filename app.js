@@ -3,7 +3,7 @@ const Router = require('koa-router')
 const logger = require('koa-logger')
 const cors = require('@koa/cors')
 const session = require('koa-session');
-const bodyParser = require('koa-bodyparser')
+const bodyParser = require('koa-bodyparser');
 const config = require('./config')
 
 const app = new Koa()
@@ -18,8 +18,7 @@ app.keys = [config.sessionSecret];
 app.use(session({
   key: config.sessionKey, // cookieKey
   maxAge: 259200000, // 3 days
-}, app))
-
+}, app));
 
 // for multipart/form-data
 app.use(bodyParser({
@@ -37,4 +36,4 @@ require('./routes')(router)
 app.use(router.routes())
 app.use(router.allowedMethods())
 
-module.exports = app
+module.exports = app;
