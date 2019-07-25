@@ -1,0 +1,11 @@
+doctype html
+html
+  head
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+  body
+    block header
+      header efferfee
+      form.reviewer(action='/test-provider/v1/tun/story' method="POST")
+        input(name="title" id="title" placeholder="title")
+        textarea(name="description" id="description" placeholder="Did you try this place? Have something to say? Leave a review...")
+        input.button(type="submit" value="Submit Review →")

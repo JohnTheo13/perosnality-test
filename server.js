@@ -5,6 +5,7 @@ const cors = require('@koa/cors')
 const session = require('koa-session');
 const bodyParser = require('koa-bodyparser')
 const config = require('./config')
+const views = require('koa-views');
 
 const app = new Koa()
 const router = new Router()
@@ -13,6 +14,8 @@ if (config.env === 'development') {
   app.use(logger())
 }
 
+// Must be used before any router is used
+app.use(views(__dirname + '/views', { extension: 'pug' }));
 app.keys = [config.sessionSecret];
 
 app.use(session({
