@@ -13,4 +13,5 @@ exports.saveStory = async ctx => {
   await story.save(function(err) {
     if(err) console.log(err);
   });
+  ctx.redirect('back')
 }
