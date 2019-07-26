@@ -8,6 +8,9 @@ const storiesSchema = new mongoose.Schema({
   description: {
     type: String,
     required: true
+  },
+  author: {
+    type: String
   }
 });
 

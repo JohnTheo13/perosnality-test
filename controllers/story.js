@@ -8,9 +8,9 @@ exports.showResponse = async ctx => {
 
 exports.saveStory = async ctx => {
   const { request: { body }} = ctx;
-  console.log(ctx);
+  console.log(body);
   const story = new Story({...body});
-  story.save();
-  await ctx.redirect('form')
-
+  await story.save(function(err) {
+    if(err) console.log(err);
+  });
 }
