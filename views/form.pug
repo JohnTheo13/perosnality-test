@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    link(rel='stylesheet', href='/css/index.css')
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+  body
+    block header
+      div
+        p.initial(id="saved") saved
+        h3 Save the BEST
+        p Φίλου μου είστε οι λίγοι που επιλέχτικαν για να σώσουν τις καλές ιστορίες
+        form.reviewer(action='/test-provider/v1/tun/story' method="POST")
+          span *
+          label(for="title") Title
+          input(name="title" id="title" placeholder="title" type="text" required)
+          span *
+          label(for="description") Description
+          textarea(name="description" id="description" placeholder="Paste your stories here" required)
+          label(for="author") Author
+          input(name="author" id="author" type="text")
+          button(type="submit" id="submit") Submit Story →
+
+    script(src="/js/index.js")

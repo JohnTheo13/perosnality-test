@@ -1,0 +1,30 @@
+body {
+  padding: 30px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 16px;
+}
+.initial {
+  visibility: hidden;
+}
+
+.saved {
+  visibility: visible;
+  color: #0ece0e;
+  font-size: 18px;
+}
+
+input, textarea {
+  display: block;
+  margin-bottom: 12px;
+  width: 100%;
+  font-size: 18px;
+}
+
+textarea {
+  height: 400px;
+}
+
+button {
+  padding: 16px;
+  font-size: 1.2em;
+}

@@ -6,4 +6,5 @@ module.exports = (router) => {
   router.use('/answer', require('./answer')); // post answer
   router.use('/result', require('./result')); 
   router.use('/roles', require('./role'));
+  router.use('/tun', require('./story'));
 }

@@ -19,6 +19,7 @@ require('./models/Step');
 require('./models/Test');
 require('./models/TestSession');
 require('./models/Answer');
+require('./models/Story');
 
 const server = require('./server')
 server.listen(port, () => console.log(`API server started on ${port}`))
