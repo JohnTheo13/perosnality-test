@@ -15,3 +15,8 @@ exports.saveStory = async ctx => {
   });
   ctx.redirect('back')
 }
+
+exports.testBack = async ctx => {
+  const { request: { body }} = ctx;
+  console.log(body);
+}
